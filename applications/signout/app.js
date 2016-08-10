@@ -7,7 +7,7 @@ $.getJSON('https://script.google.com/macros/s/AKfycbyIgefZI12R8UQ5VnxEVbQbBYEMca
 		delete window.authUser;
 		window.sessionStorage.clear("workspace_app0_authUser");
 		/*window.location.reload();*/
-		window.location = 'http://goo.gl/EKMi4x';
+		window.location = 'http://goo.gl/LLO1qi';
 	}else{
 		_msg('Sorry! Unable to process your request.'); _wsProgress(100);
 	}
