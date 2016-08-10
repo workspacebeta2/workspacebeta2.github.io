@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Job Offer Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>Job Offer Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: OFF-<span id="Data_Refno">...</span></p>
+<p>
+<span id="Data_Name">...</span>,<br />
+<span id="Data_Address">...</span>
+</p>
+<p>&nbsp;</p>
+<p>Dear <span id="Data_Name2">...</span>,</p>
+
+<p>Royal Research is pleased to offer you the position of <b><span id="Data_JD">...</span></b> and <b>Grade is <span id="Data_Grade">...</span></b> for our organization. We are excited about the potentiality that you bring to our company. You will report directly to the HR Manager along with all your documents and be a member of our Royal Research Academic Project Team. Your joining date As we discussed during your interviews, you will be working in our various Branches inside Kolkata.</p>
+
+<p><b>Reporting at:</b> <span id="Data_Reporting">...</span></p>
+<p><b>Job description:</b> <span id="Data_JD2">...</span></p>
+<p><b>Joining date:</b> <span id="Data_DOJ">...</span></p>
+
+
+<p>
+You will be classified as an Executive Employee. Your initial compensation package will be<b> <span id="Data_Salary">...</span> <span id="Data_CURR">...</span> (payable monthly)</b>. as a academic researcher You will available at our office full time as a <span id="Data_Grade2">...</span>. You have to produce 3000-3500 fresh and authentic words on daily basis maintaining the quality and plagiarism free work. In accepting our offer of employment, you certify your understanding that your employment will be on an at-will basis, and that neither you nor any Company representative has entered into a contract regarding the terms or the duration of your employment. As an at-will employee, you will be free to terminate your employment with the Company at any time, with 15 days advance notice. Likewise, the Company will have the right to reassign you, to change your compensation, or to terminate your employment at any time, with or without cause or advance notice (If you violence our term &amp; Conditions). We look forward to your arrival at our company and are confident that you will play a key role in our company&apos;s expansion into national and international markets. Please let us know if you have any questions or if we can do anything to make your arrival easier.</p>
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'Job Offer Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Name2").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Address").innerHTML = currentDataDoc[4];		
+			document.getElementById("Data_JD").innerHTML = currentDataDoc[5];
+			document.getElementById("Data_JD2").innerHTML = currentDataDoc[5];
+			document.getElementById("Data_Grade").innerHTML = currentDataDoc[6];
+			document.getElementById("Data_Grade2").innerHTML = currentDataDoc[6];
+			document.getElementById("Data_DOJ").innerHTML = currentDataDoc[7];		
+			document.getElementById("Data_Salary").innerHTML = currentDataDoc[8];		
+			document.getElementById("Data_CURR").innerHTML = currentDataDoc[9];	
+			document.getElementById("Data_Reporting").innerHTML = currentDataDoc[10];	
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

@@ -1,0 +1,45 @@
+.app-icon-bar{color:#666; -webkit-user-select: none; -moz-user-select: none; user-select: none; cursor: default; height: 64px; padding: 7px 10px;}
+.app-icon{text-align: center; font-size: 24px; line-height: 60px; cursor: pointer; border-radius: 4px;}
+.app-icon-active{opacity: 1; background: #eee;}
+
+.docstatus{display: block; position: fixed; background-color: RGBA(255,255,255,0.8); width: 100%; height: 100%; text-align: center; padding-top: 150px; color: #666; font-size: x-large; z-index: 9998;}
+
+.list-group{ margin: 11px 10px 10px 10px; }
+.list-group-item{ font-size: 16px; cursor: pointer; }
+/*.list-group-item:first-child{ background: #eee; color: #666; cursor: default; }*/
+.myProfile img{ height: 120px; width: 120px; border-radius: 50%; float: left; margin: 10px 20px 0px 0px; }
+.myProfile h4{ margin-top: 20px; }
+.bottom-20{ margin-bottom: 20px; }
+.bottom-20 h4{ margin-top: 0; }
+
+.k-tabstrip:focus { box-shadow: none; }
+.k-tabstrip { background: none transparent; }
+.k-tabstrip .k-tabstrip-items { padding: 0; border-bottom: 1px solid #ccc; }
+.k-tabstrip .k-content { border: none; padding: 20px 0; }
+
+.full-width{ width: 100%; }
+.conv-user-input{ margin-top: -15px; }
+.btn-rounded{ border-radius: 15px; }
+
+.conv { padding-top: 10px; clear: both; }
+.conv img{ float: left; margin: 5px 15px 5px 25px; border-radius: 50%; }
+.conv p{ float: left; border-radius: 4px; background: #eee; padding: 10px; max-width: 60%; min-width: 159px; }
+.conv p big{ display: block; color: inherit; opacity: 0.5; }
+.conv p small{ display: block; margin-top: 20px; color: inherit; opacity: 0.5; }
+
+.conv-me img{ float: right; }
+.conv-me p{ float: right; background: #666; color: #fff; }
+.conv-me p small{ text-align: right; }
+
+.btn-default-new{ background: #eee; border-color: #ccc; }
+
+.theme-default {background: #246ccf !important; color: #fff !important;}
+.theme-green {background: #29A020 !important; color: #fff !important;}
+.theme-blue {background: #EA9008 !important; color: #fff !important;}
+
+.fileManager{ width:100%; margin-top:20px; height:500px; }
+
+.fieldlist { margin: 0 0 -2em; padding: 0; }
+.fieldlist li { list-style: none; padding-bottom: 2em; }
+.fieldlist label { display: block padding-bottom: 1em; font-weight: bold; text-transform: uppercase; font-size: 12px; color: #444; }
+

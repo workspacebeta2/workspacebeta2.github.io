@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>INV...</title>
+    <link rel="stylesheet" href="style.css" media="all" />
+  </head>
+  <body>
+    <header class="clearfix">
+      <h1 id="InvoiceID1">INV...</h1>
+      <div id="project">
+        <div>Invoice ID <span id="InvoiceID2">INV...</span></div>
+        <div>&nbsp;</div>
+        <div id="Name">...</div>
+        <div id="DateTime">...</div>
+      </div>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th class="service">ITEM</th>
+            <th class="desc">DESCRIPTION</th>
+            <th>PRICE</th>
+            <th>QTY</th>
+            <th>TOTAL</th>
+          </tr>
+        </thead>
+        <tbody id="Items"></tbody>
+      </table>
+      <div id="notices">
+        <div>NOTICE:</div>
+        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+      </div>
+    </main>
+  </body>
+  <script>
+	if(typeof window.sessionStorage.getItem("currentDataInvoice") != "undefined"){
+	var currentDataInvoice = JSON.parse(window.sessionStorage.getItem("currentDataInvoice"));
+		if(currentDataInvoice != null){
+			document.title = currentDataInvoice[0];
+			document.getElementById("InvoiceID1").innerHTML = currentDataInvoice[0];
+			document.getElementById("InvoiceID2").innerHTML = currentDataInvoice[0];
+			document.getElementById("Name").innerHTML = currentDataInvoice[1];
+			document.getElementById("DateTime").innerHTML = currentDataInvoice[2];
+			document.getElementById("Items").innerHTML = window.sessionStorage.getItem("currentDataInvoiceItems")+'<tr><td colspan="4" class="grand total">TOTAL</td><td class="grand total">'+currentDataInvoice[3]+' '+currentDataInvoice[4]+'</td></tr><tr><td colspan="4">PAID</td><td class="total">'+currentDataInvoice[5]+' '+currentDataInvoice[4]+'</td></tr><tr><td colspan="4">DUE</td><td class="total">'+eval(currentDataInvoice[3] - currentDataInvoice[5])+' '+currentDataInvoice[4]+'</td></tr>';
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

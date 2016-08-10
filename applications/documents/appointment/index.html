@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Appointment Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>Appointment Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: APP-<span id="Data_Refno">...</span></p>
+<p>
+<span id="Data_Name">...</span>,<br />
+<span id="Data_Address">...</span>
+</p>
+<p>&nbsp;</p>
+<p>Dear <span id="Data_Name2">...</span>,</p>
+
+<p>We are pleased to provide you an appointment with Royal Research as, <b><span id="Data_JD">...</span></b> and <b>Grade is <span id="Data_Grade">...</span></b> subject to your being found medically fit, on the following terms and conditions.</p>
+
+<p><b>JOINING DATE:</b> <span id="Data_DOJ">...</span> - The company reserves the rights to assign you work with equal or higher responsibilities as it may decide from time to time.</p>
+
+<p><b>REPORTING:</b> You will be reporting to the Project-In-Charge, Royal Research. You will keep the Team Leader updated on your project performance and provide all the strategies and necessary inputs to create and implement the future strategy of the business.</p>
+
+<p><b>PAYMENT:</b> Your initial compensation package will be <span id="Data_Salary">...</span> <span id="Data_CURR">...</span> (payable monthly).</p>
+
+<p><b>PROBATION:</b> Your skills are to be managed by your key responsibility areas and will be monitored by the management. Based on which the management will know what your value add is to the function assigned to you. The management reserves the right to terminate you if found failing your job responsibilities.</p>
+
+<p><b>ANNEXURE:</b> Please see the "terms of service".</p>
+
+<p>
+You will be classified as an Executive Employee. In accepting our appointment of employment, you certify your understanding that your employment will be on an at-will basis, and that neither you nor any Company representative has entered into a contract regarding the terms or the duration of your employment. As an at-will employee, you will be free to terminate your employment with the Company at any time, with 15 days advance notice. Likewise, the Company will have the right to reassign you, to change your compensation, or to terminate your employment at any time, with or without cause or advance notice (If you violence our term &amp; Conditions). We look forward to your arrival at our company and are confident that you will play a key role in our company&apos;s expansion into national and international markets. Please let us know if you have any questions or if we can do anything to make your arrival easier.
+</p>
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'Appointment Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Name2").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Address").innerHTML = currentDataDoc[4];		
+			document.getElementById("Data_JD").innerHTML = currentDataDoc[5];		
+			document.getElementById("Data_Grade").innerHTML = currentDataDoc[6];		
+			document.getElementById("Data_DOJ").innerHTML = currentDataDoc[7];		
+			document.getElementById("Data_Salary").innerHTML = currentDataDoc[8];		
+			document.getElementById("Data_CURR").innerHTML = currentDataDoc[9];		
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

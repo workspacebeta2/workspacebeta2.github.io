@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Preparing...</title>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="ui/ws-common.css">
+	<link rel="stylesheet" href="styles/kendo.common-bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/kendo.bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/integrate.css" />
+	<link rel="stylesheet" href="ui/app.css">
+	
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+	<script src="js/kendo.timezones.min.js"></script>
+    <script src="ui/ws.js"></script>
+    <script src="ui/app.js"></script>
+</head>
+<body>
+<div class="col-md-4">
+	<div class="row app-icon-bar hidden" id="ws-nav-menu">
+		<div class="col-xs-3 app-icon flaticon-social-network15" ws-data="profile"></div>
+		<div class="col-xs-3 app-icon flaticon-marketingbuzz" ws-data="applications"></div>
+		<div class="col-xs-3 app-icon flaticon-alarm52" ws-data="notification"></div>
+		<div class="col-xs-3 app-icon flaticon-settings38" ws-data="settings"></div>
+	</div>
+	<div class="row">
+		<ul class="list-group" id="ws-nav-menu-list"></ul>
+	</div>
+</div>
+<div class="col-md-8" id="ws-explore"></div>
+<div class="ws-ui-escreen"></div>
+<script src="ui/docprep.js"></script>
+<div id="ws-ui-docstatus" class="docstatus hidden">Working...</div>
+<script>
+checkAuth();
+ </script>
+</body>
+</html>

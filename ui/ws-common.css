@@ -1,0 +1,63 @@
+.spinner{margin: 50px; height: 28px; width: 28px; animation: r360 0.8s infinite linear; border: 8px solid #999; border-right-color: transparent; border-radius: 50%;}
+@keyframes r360{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {font-family: Flaticon; font-size: inherit; font-style: normal;}
+.flaticon-alarm52:before {
+	content: "\e000";
+}
+.flaticon-calendar146:before {
+	content: "\e001";
+}
+.flaticon-commerce1:before {
+	content: "\e002";
+}
+.flaticon-database19:before {
+	content: "\e003";
+}
+.flaticon-lock27:before {
+	content: "\e004";
+}
+.flaticon-market7:before {
+	content: "\e005";
+}
+.flaticon-marketingbuzz:before {
+	content: "\e006";
+}
+.flaticon-pc6:before {
+	content: "\e007";
+}
+.flaticon-piechart1:before {
+	content: "\e008";
+}
+.flaticon-reorder:before {
+	content: "\e009";
+}
+.flaticon-settings38:before {
+	content: "\e00a";
+}
+.flaticon-social-network15:before {
+	content: "\e00b";
+}
+.flaticon-space-ship2:before {
+	content: "\e00c";
+}
+.flaticon-speechbubble10:before {
+	content: "\e00d";
+}
+.flaticon-two398:before {
+	content: "\e00e";
+}
+.flaticon-wallet33:before {
+	content: "\e00f";
+}
+
