@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Warning Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>Warning Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: WAR-<span id="Data_Refno">...</span></p>
+<p>
+<span id="Data_Name">...</span>,<br />
+<span id="Data_Address">...</span>
+</p>
+<p>&nbsp;</p>
+<p>Dear <span id="Data_Name2">...</span>,</p>
+
+<p>We bring to your attention that management has received many complains about you.We consider it as the serious breach of conduct.We warn you of strict actions if you don’t improve your-self and bring changes in your conduct. We hope that you will work in coordination with your staff to bring good results.</p>
+
+<p><b>Warning Reasons:</b> <span id="Data_WarningReasons">...</span></p>
+
+<p>We hope that this letter will act as warning in advance to avoid complications in future. If you have any say in this regard you may feel free to contact any person in management and report your grievances.</p>
+
+<p>We expect you to have a good behaviour and observe good conduct hereafter.</p>
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'Warning Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Name2").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Address").innerHTML = currentDataDoc[4];	
+			document.getElementById("Data_WarningReasons").innerHTML = currentDataDoc[19];
+				
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

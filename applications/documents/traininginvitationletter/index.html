@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Training Invitation Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>Training Invitation Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: TIL-<span id="Data_Refno">...</span></p>
+<p>
+<span id="Data_Name">...</span>,<br />
+<span id="Data_Address">...</span>
+</p>
+<p>&nbsp;</p>
+<p>Dear <span id="Data_Name2">...</span>,</p>
+
+<p>Royal Research is pleased to offer you the position of <b><span id="Data_JD">...</span></b> and <b>Grade is <span id="Data_Grade">...</span></b> for our organization.From the date of taking training, you will be responsible to the Academic Researcher Training Team through his/her appointed trainer for the everyday performance of the duties that are associated with the position and the training you receive. </p>
+
+<p><b>Reporting at:</b> <span id="Data_Reporting">...</span></p>
+<p><b>Joining date:</b> we will confirm you after successful completion of the training.</p>
+<p><b>Training Start Date:</b><span id="Data_DOJ">...</span></p>
+<p><b>Duration:</b><span id="Data_Duration">...</span></p>
+<p><b>Time:</b><span id="Data_Time">...</span></p>
+<p><b>Selection Process:</b>You need to sit for an examination.(After completion the Training)</p>
+<p>
+After successful completion of the training, your initial compensation package will be<b> <span id="Data_Salary">...</span> <span id="Data_CURR">...</span> (payable monthly)</b>. As an academic researcher You will available at our office full time as a <span id="Data_Grade2">...</span>. You have to produce 3000-3500 fresh and authentic words on daily basis maintaining the quality and plagiarism free work. </p>
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'Training Invitation Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Name2").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Address").innerHTML = currentDataDoc[4];		
+			document.getElementById("Data_JD").innerHTML = currentDataDoc[5];
+			document.getElementById("Data_Grade").innerHTML = currentDataDoc[6];
+			document.getElementById("Data_Reporting").innerHTML = currentDataDoc[10];
+			document.getElementById("Data_DOJ").innerHTML = currentDataDoc[7];
+			document.getElementById("Data_Duration").innerHTML = currentDataDoc[17];
+			document.getElementById("Data_Time").innerHTML = currentDataDoc[18];
+			document.getElementById("Data_Salary").innerHTML = currentDataDoc[8];		
+			document.getElementById("Data_CURR").innerHTML = currentDataDoc[9];	
+		    
+				
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

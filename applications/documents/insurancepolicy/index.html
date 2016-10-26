@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Insuarance Policy Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>Insuarance Policy Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: IP-<span id="Data_Refno">...</span></p>
+<p>
+<span id="Data_Name">...</span>,<br />
+<span id="Data_Address">...</span>
+</p>
+<p>&nbsp;</p>
+<p>Dear <span id="Data_Name2">...</span>,</p>
+
+<p>The Management has decided to provide you a personal insuarance policy. Your designation allows us to provide the following policy allotted by the company ..........
+
+<p><b>Policy No: </b><span id="Data_PolicyNo">...</span> </p>
+<p><b>Policy Amount: </b><span id="Data_PolicyAmount">...</span> </p>
+<p><b>Policy Issued On: </b><span id="Data_PolicyIssuedOn">...</span> </p>
+<p><b>Policy Expire On: </b><span id="Data_PolicyExpireOn">...</span> </p>
+
+<p>The company bears the primary cost for that, you need not to bear any cost if you continue your service[i.e you need to serve 365 days from the policy issued date]. Otherwise shall be rendered from your lastmonth's salary.</p>
+
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'Insuarance Policy Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Address").innerHTML = currentDataDoc[4];
+			document.getElementById("Data_Name2").innerHTML = currentDataDoc[3];
+			document.getElementById("Data_PolicyNo").innerHTML = currentDataDoc[25];
+			document.getElementById("Data_PolicyAmount").innerHTML = currentDataDoc[26];
+			document.getElementById("Data_PolicyIssuedOn").innerHTML = currentDataDoc[27];
+			document.getElementById("Data_PolicyExpireOn").innerHTML = currentDataDoc[28];
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

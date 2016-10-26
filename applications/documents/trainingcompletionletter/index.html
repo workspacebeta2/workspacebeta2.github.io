@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Training Completion Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>Training Completion Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: TCL-<span id="Data_Refno">...</span></p>
+
+
+
+<p>&nbsp;</p>
+<p>TO WHOMSOEVER IT MAY CONCERN</p>
+
+<p>This is to certify that Ms/Mr. <b><span id="Data_Name">...</span></b>, Batch Code of<b> <span id="Data_TrainingBatch">...</span></b>, has successfully completed his/her <b>Academic Research Training</b> duration <span id="Data_Duration">...</span>.
+The training was undertaken by Academic Researcher Trainer (Ms.Ananya Paramanik) at <span id="Data_Reporting">...</span> and start date was <b><span id="Data_DOJ">...</span></b>.</p>
+
+<p>The training on evaluation fulfills all the stated criteria and the student’s findings are her original work.</p>
+
+<p>We found her sincere, hardworking, and technically sound and result oriented.</p>
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'Training Completion Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];	
+			document.getElementById("Data_TrainingBatch").innerHTML = currentDataDoc[21];
+			document.getElementById("Data_Duration").innerHTML = currentDataDoc[17];
+			document.getElementById("Data_Reporting").innerHTML = currentDataDoc[10];
+			document.getElementById("Data_DOJ").innerHTML = currentDataDoc[7];
+				
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>

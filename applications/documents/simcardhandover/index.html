@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SIM Card Handover Letter of ...</title>
+</head>
+<body>
+<div style="font-family:'Arial'; font-size:14px; line-height:22px; padding:10px 50px 10px 50px;">
+<img src="../view/logo.jpg" />
+<h2>SIM Card Handover Letter</h2>
+<p style="float:right; text-align:right"><span id="Data_Date">...</span><br />Reference: SIM-<span id="Data_Refno">...</span></p>
+<p>
+<span id="Data_Name">...</span>,<br />
+<span id="Data_Address">...</span>
+</p>
+<p>&nbsp;</p>
+<p>Dear <span id="Data_Name2">...</span>,</p>
+
+<p>The Management has decided to provide you with mobile sim services under closed user group connection for the position that you have joined with us. Your designation allows us to provide with <b>SIM No:</b><span id="Data_Simno">...</span> [<b> Effective From:</b><span id="Data_SimEffectiveDate">...</span> and <b>SIM Plan:</b><span id="Data_SimPlan">...</span>,] allotted by the company. The company bears only the rental allotted to your usage and any excess of the limit shall be rendered from your salary.</p>
+
+<p>At the time of leaving the services of the Company, you will have to return this sim card to the undersigned of the Company. </p>
+
+
+<p>Sincerely,</p>
+
+<img src="../view/signature.jpg" />
+<p>
+Mr. Chinmoy Pal<br />
+Director<br />
+Royal Research<br />
+</p>
+</div>
+</body>
+<script>
+	if(typeof window.sessionStorage.getItem("currentDataDoc") != "undefined"){
+	var currentDataDoc = JSON.parse(window.sessionStorage.getItem("currentDataDoc"));
+		if(currentDataDoc != null){
+			document.title = 'SIM Card Handover Letter of ' + currentDataDoc[0];
+			var docdate = new Date(currentDataDoc[1]); document.getElementById("Data_Date").innerHTML = docdate.getDate()+'.'+eval(docdate.getMonth() + 1)+'.'+docdate.getFullYear();
+			document.getElementById("Data_Refno").innerHTML = currentDataDoc[2];		
+			document.getElementById("Data_Name").innerHTML = currentDataDoc[3];		
+			document.getElementById("Data_Address").innerHTML = currentDataDoc[4];
+			document.getElementById("Data_Name2").innerHTML = currentDataDoc[3];
+			document.getElementById("Data_Simno").innerHTML = currentDataDoc[22];
+			document.getElementById("Data_SimEffectiveDate").innerHTML = currentDataDoc[23];
+			document.getElementById("Data_SimPlan").innerHTML = currentDataDoc[24];
+		}else{
+			alert('Error! Something is wrong, please close and try again');
+			console.log('Error! Something is wrong, please close and try again');
+		}
+	}else{
+		alert('Error! Something is wrong, please close and try again');
+		console.log('Error! Something is wrong, please close and try again');
+	}
+  </script>
+</html>
