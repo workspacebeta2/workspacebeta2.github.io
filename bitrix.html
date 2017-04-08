@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Redirecting...</title>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="ui/ws-common.css">
+	<link rel="stylesheet" href="styles/kendo.common-bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/kendo.bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="styles/kendo.dataviz.bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/integrate.css" />
+	<link rel="stylesheet" href="ui/app.css">
+	
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+	<script src="js/kendo.timezones.min.js"></script>
+    <script src="ui/ws.js"></script>
+    <script src="ui/app.js"></script>	
+</head>
+<body>
+<div class="col-md-4">
+	<div class="row app-icon-bar hidden" id="ws-nav-menu">
+		<div class="col-xs-3 app-icon flaticon-marketingbuzz" ws-data="applications"></div>
+	</div>
+	<div class="row">
+		<ul class="list-group" id="ws-nav-menu-list"></ul>
+	</div>
+</div>
+<div class="col-md-8" id="ws-explore"></div>
+<div class="ws-ui-escreen"></div>
+<script src="ui/docprep.js"></script>
+<div id="ws-ui-docstatus" class="docstatus hidden">Working...</div>
+<script>
+try{document.title = 'Signing in...';_wsProgress(40);$.getJSON("https://script.google.com/macros/s/AKfycbyIgefZI12R8UQ5VnxEVbQbBYEMcaR7UyEySMHPkuXdU6R0lWIu/exec?type=signin&rl=System&email="+parseURL(window.location.href)['bitrix'][0]+"&password=bitrix").done(function(result){if(result){_wsProgress(60);_lset('authUser', _toText(result));window.authUser = _toJson(_lget("authUser"));document.title = 'Preparing...';_wsProgress(80);$.getJSON('https://script.google.com/macros/s/AKfycbzcvpbdyUVSKYigWQ-bXXAAjJMCvLmDWBGdn9omQwsyaFffqyxL/exec?type=navigation&rl='+window.authUser[0].Role).done(function(result){
+if(result){window.authUser[0]["navigation"] = result;$("#ws-nav-menu").removeClass("hidden"); document.title = wsAppTitle; _navMenuActive("applications"); $("#ws-nav-menu div").click(function(){_navMenuActive($(this).attr("ws-data"));});}else{_msg('Error: Connection problem');
+}_wsProgress(100);}).fail(function(result){_msg('Error: Connection problem'); _wsProgress(100);});}else{_msg('Error: Make sure user password is set as default or contact system administrator');}}).fail(function(result){_msg('Error: Connection problem');});
+}catch(e){_msg('Error: Please try again from Bitrix.');window.location='clear/../';}
+</script>
+</body>
+</html>
